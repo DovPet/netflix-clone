@@ -63,7 +63,8 @@ function PlansScreen() {
                 alert(`An error occured: ' ${error.message}`)
             }
             if(sessionId){
-                const stripe = await loadStripe('pk_test_51KEbP2B5d1uDVfeCdeNZ8RkNXWl0TfZrZVH8aVuWDvmdazvbUTm8TNFJ0T0bEkyZ2Pj3O658Y7ErhMwylhRXdj0T00tcE9zSVH')
+
+                const stripe = await loadStripe(process.env.REACT_APP_STRIPE_KEY)
                 stripe.redirectToCheckout({sessionId})
             }
         })

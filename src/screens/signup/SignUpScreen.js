@@ -60,7 +60,6 @@ function SignUpScreen({email, setEmail}) {
                         <span className='signUpScreen__link' onClick={() => setShowRegister(false)}>Login</span>
                     </h4>
                 </>
-
             ) : (
                 <>
                     <h1>Sign In</h1>
@@ -71,7 +70,6 @@ function SignUpScreen({email, setEmail}) {
                         <span className='signUpScreen__gray'>New to Netflix? </span>
                         <span className='signUpScreen__link' onClick={() => {
                             setShowRegister(true)
-                            //registerPassRef.current.value = undefined
                             }}>Sign Up now.</span>
                     </h4>
                 </>
